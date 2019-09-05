@@ -53,3 +53,18 @@ nav ul > li {
 .logoutLbl {
   cursor: pointer;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+a:hover {
+  background-color: #aaa;
+}
+
+a.active {
+  background-color: #388e8e;
+}

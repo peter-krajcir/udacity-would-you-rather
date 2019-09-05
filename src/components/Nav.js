@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import UserGreetings from "./UserGreetings";
 import { setAuthedUser } from "../actions/authedUser";
+import { NavLink } from "react-router-dom";
 
 const Nav = props => {
   const handleLogout = () => {
@@ -11,9 +12,21 @@ const Nav = props => {
   return (
     <nav>
       <ul>
-        <li>Home</li>
-        <li>New Question</li>
-        <li>Leaderboard</li>
+        <li>
+          <NavLink to="/" exact activeClassName="active">
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/new-question" activeClassName="active">
+            New Question
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/leaderboard" activeClassName="active">
+            Leaderboard
+          </NavLink>
+        </li>
         <li>
           {props.authedUser !== null && (
             <UserGreetings
