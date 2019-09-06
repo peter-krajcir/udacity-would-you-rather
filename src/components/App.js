@@ -10,6 +10,7 @@ import Dashboard from "./Dashboard";
 import NewQuestion from "./NewQuestion";
 import Leaderboard from "./Leaderboard";
 import NotFound from "./NotFound";
+import QuestionPage from "./QuestionPage";
 
 class App extends Component {
   componentDidMount() {
@@ -29,8 +30,9 @@ class App extends Component {
                 ) : (
                   <Switch>
                     <Route path="/" exact component={Dashboard} />
-                    <Route path="/new-question" exact component={NewQuestion} />
-                    <Route path="/leaderboard" exact component={Leaderboard} />
+                    <Route path="/add" component={NewQuestion} />
+                    <Route path="/leaderboard" component={Leaderboard} />
+                    <Route path="/questions/:id" component={QuestionPage} />
                     <Route component={NotFound} />
                   </Switch>
                 )}

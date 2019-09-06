@@ -2,40 +2,42 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Udacity project - Wold you rather
 
-In order to run the project, you need to install dependencies
+Application is built using react and redux. Server is implemented into the application. For asynchronous communication with the server, I'm using redux thunk.
+
+### Instructions to run the application
+
+In order to run the project, clone the repository
+
+`git clone https://github.com/peter-krajcir/udacity-would-you-rather.git`
+
+Then switch to the cloned directory
+
+`cd udacity-would-you-rather`
+
+And install the dependecies
 
 `npm install`
 
-and then you will be able to run the project by executing
+Then you will be able to run the project by executing
 
 `npm start`
 
 The project starts in browser it opens [http://localhost:3000](http://localhost:3000) so you will be able to see it.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### User Management
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+In order to use the webpage, user must be logged in. He can from 3 different users available in the dropdown. To switch the users, click on the Logout link in the upper menu
 
-### Code Splitting
+### Application
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+#### Home
 
-### Analyzing the Bundle Size
+2 categories of the questions: Unanswered (selected by default) and Answered based on the vote of the signed user
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+#### New Question
 
-### Making a Progressive Web App
+Signed user can create a new poll with 2 options for voting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+#### Leaderboard
 
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Descending ordered list of the users based on their votes and created questions
