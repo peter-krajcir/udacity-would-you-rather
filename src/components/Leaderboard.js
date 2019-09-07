@@ -4,7 +4,7 @@ const Leaderboard = props => {
   return (
     <div>
       <h3>Leaderboard</h3>
-      <div class="leaderboard">
+      <div className="leaderboard">
         {props.userIds.map((userId, index) => {
           const user = props.users[userId];
           const userAnswers = Object.keys(user.answers).length;
@@ -23,24 +23,28 @@ const Leaderboard = props => {
               </div>
               <div className="leaderboard-item-stats">
                 <div className="leaderboard-item-answered">
-                  <span class="leaderboard-item-stats-label">
+                  <span className="leaderboard-item-stats-label">
                     Answered Questions:
                   </span>
-                  <span class="leaderboard-item-stats-value">
+                  <span className="leaderboard-item-stats-value">
                     {userAnswers}
                   </span>
                 </div>
                 <div className="leaderboard-item-questions">
-                  <span class="leaderboard-item-stats-label">
+                  <span className="leaderboard-item-stats-label">
                     Created Questions:
                   </span>
-                  <span class="leaderboard-item-stats-value">
+                  <span className="leaderboard-item-stats-value">
                     {userQuestions}
                   </span>
                 </div>
                 <div className="leaderboard-item-total">
-                  <span class="leaderboard-item-stats-label">Total Score:</span>
-                  <span class="leaderboard-item-stats-value">{userTotal}</span>
+                  <span className="leaderboard-item-stats-label">
+                    Total Score:
+                  </span>
+                  <span className="leaderboard-item-stats-value">
+                    {userTotal}
+                  </span>
                 </div>
               </div>
             </div>

@@ -5,7 +5,8 @@ import { setAuthedUser } from "../actions/authedUser";
 class Users extends Component {
   handleClick = () => {
     const selectedAuthedUser = this.select.value;
-    this.props.dispatch(setAuthedUser(selectedAuthedUser));
+    // this.props.dispatch(setAuthedUser(selectedAuthedUser));
+    this.props.setAuthedUser(selectedAuthedUser);
   };
 
   render() {
@@ -34,4 +35,11 @@ function mapStateToProps({ users, authedUser }) {
     authedUser
   };
 }
-export default connect(mapStateToProps)(Users);
+
+const mapDispatchToProps = {
+  setAuthedUser
+};
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Users);
